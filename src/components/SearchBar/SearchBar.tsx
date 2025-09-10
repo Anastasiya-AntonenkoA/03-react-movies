@@ -17,8 +17,8 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
       return;
     }
 
-    onSubmit(query.trim()); // передаємо в App
-    setQuery(""); // очищаємо інпут
+    onSubmit(query.trim());
+    setQuery("");
   };
 
   return (

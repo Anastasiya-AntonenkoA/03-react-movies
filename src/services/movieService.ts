@@ -4,7 +4,6 @@ import type { Movie } from "../types/movie";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 
-// Тип відповіді від TMDB
 interface MovieResponse {
   page: number;
   results: Movie[];
@@ -12,7 +11,6 @@ interface MovieResponse {
   total_results: number;
 }
 
-// Параметри пошуку
 interface FetchMoviesParams {
   query: string;
   page?: number;
@@ -39,7 +37,7 @@ export async function fetchMovies({
 
     return response.data.results;
   } catch (error) {
-    console.error("Помилка при отриманні фільмів:", error);
+    console.error("Error while retrieving movies:", error);
     throw error;
   }
 }
