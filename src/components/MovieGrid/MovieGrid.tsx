@@ -33,7 +33,6 @@ export default function MovieGrid({ movies, onSelect }: MovieGridProps) {
               }
               alt={movie.title}
                       loading="lazy"
-                      onClick={() => onSelect(movie)}
             />
             <h2 className={styles.title}>{movie.title}</h2>
           </div>
